@@ -1,0 +1,63 @@
+{
+	// Place your lottie-presentation workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Create new Block": {
+		"scope": "javascript",
+		"prefix": "nbl",
+		"body": [
+			"import React from 'react';",
+			"import Lottie from 'react-lottie';",
+			"import animationData from '../assets/react-lottie.json';",
+			"import CodeBlock from '../shared/block/CodeBlock';",
+			
+			"const Block$1 = () => {",
+				"const title = 'Basic react-lottie';",
+				"const body = (",
+					"<p>",
+						"Simple use case for Lottie, using react-lottie. <br />",
+						"Notice that the default behavior of react-lottie is to pause when clicked.",
+					"</p>",
+				");",
+				"const defaultOptions = {",
+					"loop: true,",
+					"autoplay: true,",
+					"animationData: animationData,",
+					"rendererSettings: {",
+						"preserveAspectRation: 'xMidyMid slice',",
+					"},",
+				"};",
+			
+				"const lottie = (",
+					"<Lottie options={ defaultOptions }",
+						"height={ 400 }",
+						"width={ 400 } />",
+				");",
+			
+				"return (",
+					"<CodeBlock",
+						"title={ title }",
+						"body={ body }",
+						"animation={ lottie } />",
+				");",
+			"};",
+			
+			"export default Block$1;"
+		],
+		"description": ""
+	}
+}
