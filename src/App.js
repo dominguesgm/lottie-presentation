@@ -5,16 +5,16 @@ import Block03 from './blocks/Block03';
 import './App.css';
 
 function App() {
-	return (
-		<div className="App">
-			<h1>
+    return (
+        <div className="App">
+            <h1>
         Some usage examples of AirBnB's Lottie library
-			</h1>
-			<Block01 />
-			<Block02 />
-			<Block03 />
-		</div>
-	);
+            </h1>
+            <Block01 />
+            <Block02 />
+            <Block03 />
+        </div>
+    );
 }
 
 export default App;

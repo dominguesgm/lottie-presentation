@@ -6,7 +6,6 @@ import CodeBlock from '../shared/block/CodeBlock';
 class Block01 extends Component {
     render() {
         const title = 'react-lottie';
-
         const body = (
             <p>
                 Create animations using <a href="https://github.com/chenqingspring/react-lottie/">react-lottie</a>. <br />
@@ -21,10 +20,10 @@ class Block01 extends Component {
             autoplay: true,
             animationData: animationData,
             rendererSettings: {
-                preserveAspectRatio: 'xMidYMid slice',
-            }
+                preserveAspectRation: 'xMidyMid slice',
+            },
         };
-
+        
         const eventListeners = [
             // {
             // 	eventName: 'complete',
@@ -41,10 +40,9 @@ class Block01 extends Component {
         ];
 
         const lottie = (
-            <Lottie
-                options={ defaultOptions }
+            <Lottie options={ defaultOptions }
                 height={ 400 }
-                width={ 400 }
+                width={ 400 } 
                 eventListeners={ eventListeners }
             />
         );
@@ -53,11 +51,10 @@ class Block01 extends Component {
             <CodeBlock
                 title={ title }
                 body={ body }
-                animation={ lottie }
-            />
+                animation={ lottie } />
         );
     }
-
+    
     handleComplete = (data) => {
         console.log('Animation has completed');
         console.log('Complete data', data);

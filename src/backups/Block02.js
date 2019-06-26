@@ -25,7 +25,7 @@ class Block02 extends Component {
     
         const defaultOptions = {
             loop: false,
-            autoplay: false,
+            autoplay: true,
             animationData: animationData,
             rendererSettings: {
                 preserveAspectRation: 'xMidyMid slice',
@@ -44,7 +44,6 @@ class Block02 extends Component {
                     isPaused={ pause }
                     isStopped={ stop }
                     direction={ direction }
-                    segments={[60, 100]}
                 />
             </div>
         );
@@ -56,7 +55,7 @@ class Block02 extends Component {
                 animation={ lottie } />
         );
     }
-
+    
     handleClick = () => {
         const { pause } = this.state;
         

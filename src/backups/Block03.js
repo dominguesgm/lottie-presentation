@@ -42,8 +42,7 @@ class Block03 extends Component {
     
         const lottie = (
             <div ref={ this.animationRef }
-                onClick={ this.handleClick }
-                style={{backgroundColor: 'yellow'}}>
+                onClick={ this.handleClick }>
                 <LottieControlled
                     options={ defaultOptions }
                     height={ 400 }
@@ -74,15 +73,11 @@ class Block03 extends Component {
         const elementHeight = this.animationRef.current.clientHeight;
         const windowHeight = window.innerHeight;
         
-        const extraOffset = 0;
+        const extraOffset = 250;
         
-        const distance = windowHeight + elementHeight;
-
         const elementVisibility = scrollTop+windowHeight-extraOffset-elementPageOffset;
-        const unboundPercentage = (elementVisibility) / distance;
-        const percentage = Math.min(Math.max(0, unboundPercentage), 1);
-
-        console.log('percentage', percentage);
+        const unboundPercentage = (elementVisibility) / elementHeight;
+        const percentage = Math.min(Math.max(0, unboundPercentage*0.75), 1);
         
         position !== percentage && this.setState({ position: percentage});
     }
